@@ -20,7 +20,8 @@ namespace BD3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Class1.Affiche("Ligne");
+            string a = "Ligne";
+            Class1.Affiche(a);
 
         }
     }

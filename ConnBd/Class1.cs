@@ -23,7 +23,7 @@ namespace ConnBd
 
             MaCnx = new MySqlConnection(chaineDeConnection);
 
-            string sql = $"SELECT * FROM '{table}'";
+            string sql = $"SELECT * FROM {table}";
 
             try
             {
@@ -34,8 +34,8 @@ namespace ConnBd
 
                 while (rdr.Read())
                 {
-                    Console.WriteLine(rdr.GetInt32(0).ToString());
-                    Console.WriteLine(rdr.GetString(1));
+                    Console.WriteLine(rdr.GetValue(0).ToString());
+                    Console.WriteLine(rdr.GetValue(1));
                     Console.WriteLine(rdr.GetBoolean(2));
                     Console.WriteLine(rdr.GetString(3));
                 }
